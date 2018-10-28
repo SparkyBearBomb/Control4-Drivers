@@ -1,0 +1,7 @@
+﻿<Driver type="c4z" name="JFK_Blinds">
+ <Items>
+  <Item type="file" name="documentation.rtf" />
+  <Item type="file" name="driver.lua" />
+  <Item type="file" name="driver.xml" />
+ </Items>
+</Driver>

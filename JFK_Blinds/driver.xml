@@ -1,0 +1,149 @@
+<devicedata>
+  <version>220</version>
+  <manufacturer>JFK Automation</manufacturer>
+  <model>JFK Relay Controler</model>
+  <creator>Benjamin Allott</creator>
+  <name>JFK Relay Controler</name>
+  <small>devices_sm/C4.gif</small>
+  <large>devices_lg/C4.gif</large>
+  <control>lua_gen</control>
+  <controlmethod>relay</controlmethod>
+  <driver>DriverWorks</driver>
+  <copyright>JFK Automation &amp; Benjamin Allott</copyright>
+  <created>10/10/2018 12:40 PM</created>
+  <modified>10/15/2018 3:43 PM</modified>
+  <proxies qty="1">
+    <proxy proxybindingid="5001" name="JFK Relay Control" primary="True">blindV2</proxy>
+  </proxies>
+  <config>
+    <script encryption="2" file="driver.lua"></script>
+    <power_management_method>AlwaysOn</power_management_method>
+    <power_delay>0</power_delay>
+    <power_command_delay>0</power_command_delay>
+    <power_command_needed>False</power_command_needed>
+    <properties>
+      <property>
+        <name>Log Level</name>
+        <type>LIST</type>
+        <default>3 - Warning</default>
+        <items>
+          <item>1 - Fatal</item>
+          <item>2 - Error</item>
+          <item>3 - Warning</item>
+          <item>4 - Info</item>
+          <item>5 - Debug</item>
+          <item>6 - Trace</item>
+        </items>
+        <tooltip>Select Logging Level to be Displayed in Lua Tab</tooltip>
+      </property>
+      <property>
+        <name>Command Delay</name>
+        <type>RANGED_INTEGER</type>
+        <default>500</default>
+        <minimum>50</minimum>
+        <maximum>5000</maximum>
+        <tooltip>Delay between relay commands</tooltip>
+      </property>
+      <property>
+        <name>POWER RELAY STATE</name>
+        <type>STRING</type>
+        <default></default>
+        <readonly>true</readonly>
+      </property>
+      <property>
+        <name>DIRECTION RELAY STATE</name>
+        <type>STRING</type>
+        <default></default>
+        <readonly>true</readonly>
+      </property>
+      <property>
+        <name>Invert Direction Relay</name>
+        <type>LIST</type>
+        <default>FALSE</default>
+        <items>
+          <item>TRUE</item>
+          <item>FALSE</item>
+        </items>
+      </property>
+      <property>
+        <name>Device Monitor</name>
+        <type>DEVICE_SELECTOR</type>
+        <readonly>false</readonly>
+        <items>
+          <item>tv.c4i</item>
+          <item>plasma.c4i</item>
+          <item>projector.c4i</item>
+        </items>
+        <multiselect>false</multiselect>
+      </property>
+    </properties>
+    <documentation file="documentation.rtf" />
+  </config>
+  <connections>
+    <connection>
+      <type>2</type>
+      <id>5001</id>
+      <audiosource>false</audiosource>
+      <videosource>false</videosource>
+      <connectionname>PROXY</connectionname>
+      <facing>1</facing>
+      <consumer>false</consumer>
+      <linelevel>false</linelevel>
+      <classes>
+        <class>
+          <classname>BLIND</classname>
+        </class>
+      </classes>
+    </connection>
+    <connection>
+      <type>1</type>
+      <id>1</id>
+      <audiosource>false</audiosource>
+      <videosource>false</videosource>
+      <connectionname>Power Relay</connectionname>
+      <facing>1</facing>
+      <consumer>true</consumer>
+      <linelevel>true</linelevel>
+      <classes>
+        <class>
+          <classname>RELAY</classname>
+        </class>
+      </classes>
+    </connection>
+    <connection>
+      <type>1</type>
+      <id>2</id>
+      <audiosource>false</audiosource>
+      <videosource>false</videosource>
+      <connectionname>Direction Relay</connectionname>
+      <facing>1</facing>
+      <consumer>true</consumer>
+      <linelevel>true</linelevel>
+      <classes>
+        <class>
+          <classname>RELAY</classname>
+        </class>
+      </classes>
+    </connection>
+  </connections>
+  <capabilities>
+    <can_stop_blinds>False</can_stop_blinds>
+    <can_designate_blinds_level>False</can_designate_blinds_level>
+    <can_designate_louvers_level>False</can_designate_louvers_level>
+    <can_stop_louvers>False</can_stop_louvers>
+    <has_blinds>True</has_blinds>
+    <has_louvers>False</has_louvers>
+    <louvers_preset_count>0</louvers_preset_count>
+    <blinds_preset_count>0</blinds_preset_count>
+  </capabilities>
+  <search_types>
+    <type>c4:relay</type>
+  </search_types>
+  <composer_categories>
+    <category>Lighting</category>
+    <category>User Interface</category>
+    <category>Audio/Video</category>
+    <category>Motorization</category>
+    <category>Unknown</category>
+  </composer_categories>
+</devicedata>
