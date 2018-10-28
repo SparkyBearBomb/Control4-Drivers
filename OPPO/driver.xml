@@ -1,0 +1,906 @@
+<devicedata>
+  <copyright>JFK Automation &amp; Benjamin</copyright>
+  <creator>Benjamin Allott</creator>
+  <templatedescription>Generic Proxy Template</templatedescription>
+  <manufacturer>JFK Automation</manufacturer>
+  <name>OPPO Bluray Disc Player</name>
+  <model>UDP-203</model>
+  <created>08/14/2018 7:59 AM</created>
+  <modified>10/08/2018 2:29 PM</modified>
+  <version>321</version>
+  <small></small>
+  <large></large>
+  <control>lua_gen</control>
+  <controlmethod>serial</controlmethod>
+  <driver>DriverWorks</driver>
+  <proxies qty="2">
+    <proxy proxybindingid="5001" name="BLURAY">dvd</proxy>
+    <proxy proxybindingid="5002" name="CD">cd</proxy>
+  </proxies>
+  <capabilities>
+    <digital_audio_support>True</digital_audio_support>
+    <has_discrete_input_select>True</has_discrete_input_select>
+    <can_upclass>True</can_upclass>
+    <can_downclass>True</can_downclass>
+    <can_switch>True</can_switch>
+    <can_play_cd>True</can_play_cd>
+    <has_direct_track_access>True</has_direct_track_access>
+  </capabilities>
+  <connections>
+    <connection>
+      <id>5001</id>
+      <connectionname>BLURAY</connectionname>
+      <facing>6</facing>
+      <type>2</type>
+      <consumer>false</consumer>
+      <audiosource>false</audiosource>
+      <videosource>false</videosource>
+      <linelevel>false</linelevel>
+      <classes>
+        <class>
+          <classname>DVD</classname>
+        </class>
+      </classes>
+    </connection>
+    <connection>
+      <id>5002</id>
+      <connectionname>CD</connectionname>
+      <facing>6</facing>
+      <type>2</type>
+      <consumer>false</consumer>
+      <audiosource>false</audiosource>
+      <videosource>false</videosource>
+      <linelevel>false</linelevel>
+      <classes>
+        <class>
+          <classname>CD</classname>
+        </class>
+      </classes>
+    </connection>
+    <connection proxybindingid="5001">
+      <type>6</type>
+      <id>3000</id>
+      <audiosource>false</audiosource>
+      <videosource>false</videosource>
+      <idautobind>1</idautobind>
+      <connectionname>CD</connectionname>
+      <facing>1</facing>
+      <consumer>true</consumer>
+      <linelevel>true</linelevel>
+      <hidden>true</hidden>
+      <classes>
+        <class>
+          <classname>CD</classname>
+        </class>
+      </classes>
+    </connection>
+    <connection proxybindingid="5002">
+      <type>6</type>
+      <id>4000</id>
+      <audiosource>true</audiosource>
+      <videosource>true</videosource>
+      <idautobind>1</idautobind>
+      <connectionname>CD</connectionname>
+      <facing>1</facing>
+      <consumer>false</consumer>
+      <linelevel>true</linelevel>
+      <hidden>true</hidden>
+      <classes>
+        <class>
+          <classname>CD</classname>
+        </class>
+      </classes>
+    </connection>
+    <connection>
+      <type>1</type>
+      <id>1</id>
+      <audiosource>false</audiosource>
+      <videosource>false</videosource>
+      <connectionname>Serial</connectionname>
+      <facing>1</facing>
+      <consumer>true</consumer>
+      <linelevel>true</linelevel>
+      <classes>
+        <class>
+          <classname>RS_232</classname>
+        </class>
+      </classes>
+    </connection>
+    <connection proxybindingid="5002">
+      <type>6</type>
+      <id>4001</id>
+      <audiosource>true</audiosource>
+      <videosource>false</videosource>
+      <connectionname>CD OUT</connectionname>
+      <facing>1</facing>
+      <consumer>false</consumer>
+      <linelevel>true</linelevel>
+      <classes>
+        <class>
+          <classname>DIGITAL_COAX</classname>
+        </class>
+        <class>
+          <classname>DIGITAL_OPTICAL</classname>
+        </class>
+        <class>
+          <classname>HDMI</classname>
+        </class>
+        <class>
+          <classname>STEREO</classname>
+        </class>
+      </classes>
+    </connection>
+    <connection proxybindingid="5001">
+      <type>5</type>
+      <id>2000</id>
+      <audiosource>true</audiosource>
+      <videosource>true</videosource>
+      <connectionname>BLURAY OUT</connectionname>
+      <facing>1</facing>
+      <consumer>false</consumer>
+      <linelevel>true</linelevel>
+      <classes>
+        <class>
+          <classname>HDMI</classname>
+        </class>
+      </classes>
+    </connection>
+    <connection proxybindingid="5001">
+      <type>6</type>
+      <id>4002</id>
+      <audiosource>true</audiosource>
+      <videosource>false</videosource>
+      <connectionname>BLURAY OUT</connectionname>
+      <facing>1</facing>
+      <consumer>false</consumer>
+      <linelevel>true</linelevel>
+      <classes>
+        <class>
+          <classname>DIGITAL_COAX</classname>
+        </class>
+        <class>
+          <classname>DIGITAL_OPTICAL</classname>
+        </class>
+        <class>
+          <classname>HDMI</classname>
+        </class>
+        <class>
+          <classname>MULTI_STEREO</classname>
+        </class>
+        <class>
+          <classname>STEREO</classname>
+        </class>
+      </classes>
+    </connection>
+    <connection>
+      <type>4</type>
+      <id>6001</id>
+      <audiosource>false</audiosource>
+      <videosource>false</videosource>
+      <connectionname>NETWORK</connectionname>
+      <facing>1</facing>
+      <consumer>true</consumer>
+      <linelevel>true</linelevel>
+      <classes>
+        <class>
+          <classname>TCP</classname>
+          <ports>
+            <port>
+              <number>23</number>
+              <auto_connect>true</auto_connect>
+              <monitor_connection>true</monitor_connection>
+              <keep_connection>true</keep_connection>
+            </port>
+          </ports>
+        </class>
+      </classes>
+    </connection>
+  </connections>
+  <config>
+    <documentation file="documentation.rtf" />
+    <script encryption="2" file="driver.lua" />
+    <actions>
+      <action>
+        <name>Set Verbose Mode 3</name>
+        <command>SETSVM</command>
+      </action>
+      <action>
+        <name>Query Verbose Mode</name>
+        <command>QVM</command>
+      </action>
+      <action>
+        <name>Print Command Map</name>
+        <command>PrintCmdMap</command>
+      </action>
+    </actions>
+    <properties>
+      <property>
+        <name>Key</name>
+        <type>STRING</type>
+        <default></default>
+        <readonly>false</readonly>
+        <multiselect>false</multiselect>
+        <tooltip></tooltip>
+        <password>true</password>
+      </property>
+      <property>
+        <name>Log Level</name>
+        <type>LIST</type>
+        <readonly>false</readonly>
+        <default>3 - Warning</default>
+        <items>
+          <item>1 - Fatal</item>
+          <item>2 - Error</item>
+          <item>3 - Warning</item>
+          <item>4 - Info</item>
+          <item>5 - Debug</item>
+          <item>6 - Trace</item>
+        </items>
+        <multiselect>false</multiselect>
+        <password>false</password>
+        <tooltip>Select Logging Level to be Displayed in Lua Tab</tooltip>
+      </property>
+      <property>
+        <name>MSG</name>
+        <type>STRING</type>
+        <default></default>
+        <readonly>true</readonly>
+        <multiselect>false</multiselect>
+        <tooltip>Display responses from the device</tooltip>
+        <password>false</password>
+      </property>
+      <property>
+        <name>Time Code</name>
+        <type>STRING</type>
+        <default></default>
+        <password>false</password>
+        <readonly>true</readonly>
+        <multiselect>false</multiselect>
+        <tooltip>Display time code information from the device</tooltip>
+      </property>
+      <property>
+        <name>Power On Delay</name>
+        <type>RANGED_INTEGER</type>
+        <default>1500</default>
+        <minimum>0</minimum>
+        <maximum>60000</maximum>
+        <tooltip>Delay until next command AFTER the power on command is sent</tooltip>
+        <multiselect>false</multiselect>
+        <readonly>false</readonly>
+        <password>false</password>
+      </property>
+      <property>
+        <name>Command Delay</name>
+        <type>RANGED_INTEGER</type>
+        <default>20</default>
+        <minimum>0</minimum>
+        <maximum>1000</maximum>
+        <tooltip>Delay between commands (excluding power on command)</tooltip>
+        <multiselect>false</multiselect>
+        <readonly>false</readonly>
+        <password>false</password>
+      </property>
+      <property>
+        <name></name>
+        <type>STRING</type>
+        <default>Remote Mapping</default>
+        <readonly>true</readonly>
+      </property>
+      <property>
+        <name>Custom Button 1</name>
+        <type>LIST</type>
+        <default>NOP - No Operation</default>
+        <items>
+          <item>NOP - No Operation</item>
+          <item>HOM - Home Menu</item>
+          <item>MNU - Popup Menu</item>
+          <item>TTL - Top Menu</item>
+          <item>HDR - HDR Menu</item>
+          <item>GOT - Go To Menu</item>
+          <item>OPT - Option Menu</item>
+          <item>M3D - 3D/2D Conversion</item>
+          <item>CLR - Clear</item>
+          <item>OSD - On Screen Display</item>
+          <item>AUD - Audio Language</item>
+          <item>SUB - Subtitle Language</item>
+          <item>ANG - Camera Angle</item>
+          <item>SEH - Picture Adjustment</item>
+          <item>ZOM - Zoom Adjustment</item>
+          <item>RPT - Repeat Play</item>
+          <item>RED - Red</item>
+          <item>GRN - Green</item>
+          <item>YLW - Yellow</item>
+          <item>BLU - Blue</item>
+          <item>RET - Return</item>
+          <item>EJT - Eject</item>
+        </items>
+      </property>
+      <property>
+        <name>Custom Button 2</name>
+        <type>LIST</type>
+        <default>EJT - Eject</default>
+        <items>
+          <item>NOP - No Operation</item>
+          <item>HOM - Home Menu</item>
+          <item>MNU - Popup Menu</item>
+          <item>TTL - Top Menu</item>
+          <item>HDR - HDR Menu</item>
+          <item>GOT - Go To Menu</item>
+          <item>OPT - Option Menu</item>
+          <item>M3D - 3D/2D Conversion</item>
+          <item>CLR - Clear</item>
+          <item>OSD - On Screen Display</item>
+          <item>AUD - Audio Language</item>
+          <item>SUB - Subtitle Language</item>
+          <item>ANG - Camera Angle</item>
+          <item>SEH - Picture Adjustment</item>
+          <item>ZOM - Zoom Adjustment</item>
+          <item>RPT - Repeat Play</item>
+          <item>RED - Red</item>
+          <item>GRN - Green</item>
+          <item>YLW - Yellow</item>
+          <item>BLU - Blue</item>
+          <item>RET - Return</item>
+          <item>EJT - Eject</item>
+        </items>
+      </property>
+      <property>
+        <name>Custom Button 3</name>
+        <type>LIST</type>
+        <default>NOP - No Operation</default>
+        <items>
+          <item>NOP - No Operation</item>
+          <item>HOM - Home Menu</item>
+          <item>MNU - Popup Menu</item>
+          <item>TTL - Top Menu</item>
+          <item>HDR - HDR Menu</item>
+          <item>GOT - Go To Menu</item>
+          <item>OPT - Option Menu</item>
+          <item>M3D - 3D/2D Conversion</item>
+          <item>CLR - Clear</item>
+          <item>OSD - On Screen Display</item>
+          <item>AUD - Audio Language</item>
+          <item>SUB - Subtitle Language</item>
+          <item>ANG - Camera Angle</item>
+          <item>SEH - Picture Adjustment</item>
+          <item>ZOM - Zoom Adjustment</item>
+          <item>RPT - Repeat Play</item>
+          <item>RED - Red</item>
+          <item>GRN - Green</item>
+          <item>YLW - Yellow</item>
+          <item>BLU - Blue</item>
+          <item>RET - Return</item>
+          <item>EJT - Eject</item>
+        </items>
+      </property>
+      <property>
+        <name>Red</name>
+        <type>LIST</type>
+        <default>RED - Red</default>
+        <items>
+          <item>NOP - No Operation</item>
+          <item>HOM - Home Menu</item>
+          <item>MNU - Popup Menu</item>
+          <item>TTL - Top Menu</item>
+          <item>HDR - HDR Menu</item>
+          <item>GOT - Go To Menu</item>
+          <item>OPT - Option Menu</item>
+          <item>M3D - 3D/2D Conversion</item>
+          <item>CLR - Clear</item>
+          <item>OSD - On Screen Display</item>
+          <item>AUD - Audio Language</item>
+          <item>SUB - Subtitle Language</item>
+          <item>ANG - Camera Angle</item>
+          <item>SEH - Picture Adjustment</item>
+          <item>ZOM - Zoom Adjustment</item>
+          <item>RPT - Repeat Play</item>
+          <item>RED - Red</item>
+          <item>GRN - Green</item>
+          <item>YLW - Yellow</item>
+          <item>BLU - Blue</item>
+          <item>RET - Return</item>
+          <item>EJT - Eject</item>
+        </items>
+      </property>
+      <property>
+        <name>Green</name>
+        <type>LIST</type>
+        <default>GRN - Green</default>
+        <items>
+          <item>NOP - No Operation</item>
+          <item>HOM - Home Menu</item>
+          <item>MNU - Popup Menu</item>
+          <item>TTL - Top Menu</item>
+          <item>HDR - HDR Menu</item>
+          <item>GOT - Go To Menu</item>
+          <item>OPT - Option Menu</item>
+          <item>M3D - 3D/2D Conversion</item>
+          <item>CLR - Clear</item>
+          <item>OSD - On Screen Display</item>
+          <item>AUD - Audio Language</item>
+          <item>SUB - Subtitle Language</item>
+          <item>ANG - Camera Angle</item>
+          <item>SEH - Picture Adjustment</item>
+          <item>ZOM - Zoom Adjustment</item>
+          <item>RPT - Repeat Play</item>
+          <item>RED - Red</item>
+          <item>GRN - Green</item>
+          <item>YLW - Yellow</item>
+          <item>BLU - Blue</item>
+          <item>RET - Return</item>
+          <item>EJT - Eject</item>
+        </items>
+      </property>
+      <property>
+        <name>Yellow</name>
+        <type>LIST</type>
+        <default>YLW - Yellow</default>
+        <items>
+          <item>NOP - No Operation</item>
+          <item>HOM - Home Menu</item>
+          <item>MNU - Popup Menu</item>
+          <item>TTL - Top Menu</item>
+          <item>HDR - HDR Menu</item>
+          <item>GOT - Go To Menu</item>
+          <item>OPT - Option Menu</item>
+          <item>M3D - 3D/2D Conversion</item>
+          <item>CLR - Clear</item>
+          <item>OSD - On Screen Display</item>
+          <item>AUD - Audio Language</item>
+          <item>SUB - Subtitle Language</item>
+          <item>ANG - Camera Angle</item>
+          <item>SEH - Picture Adjustment</item>
+          <item>ZOM - Zoom Adjustment</item>
+          <item>RPT - Repeat Play</item>
+          <item>RED - Red</item>
+          <item>GRN - Green</item>
+          <item>YLW - Yellow</item>
+          <item>BLU - Blue</item>
+          <item>RET - Return</item>
+          <item>EJT - Eject</item>
+        </items>
+      </property>
+      <property>
+        <name>Blue</name>
+        <type>LIST</type>
+        <default>BLU - Blue</default>
+        <items>
+          <item>NOP - No Operation</item>
+          <item>HOM - Home Menu</item>
+          <item>MNU - Popup Menu</item>
+          <item>TTL - Top Menu</item>
+          <item>HDR - HDR Menu</item>
+          <item>GOT - Go To Menu</item>
+          <item>OPT - Option Menu</item>
+          <item>M3D - 3D/2D Conversion</item>
+          <item>CLR - Clear</item>
+          <item>OSD - On Screen Display</item>
+          <item>AUD - Audio Language</item>
+          <item>SUB - Subtitle Language</item>
+          <item>ANG - Camera Angle</item>
+          <item>SEH - Picture Adjustment</item>
+          <item>ZOM - Zoom Adjustment</item>
+          <item>RPT - Repeat Play</item>
+          <item>RED - Red</item>
+          <item>GRN - Green</item>
+          <item>YLW - Yellow</item>
+          <item>BLU - Blue</item>
+          <item>RET - Return</item>
+          <item>EJT - Eject</item>
+        </items>
+      </property>
+      <property>
+        <name>Star</name>
+        <type>LIST</type>
+        <default>NOP - No Operation</default>
+        <items>
+          <item>NOP - No Operation</item>
+          <item>HOM - Home Menu</item>
+          <item>MNU - Popup Menu</item>
+          <item>TTL - Top Menu</item>
+          <item>HDR - HDR Menu</item>
+          <item>GOT - Go To Menu</item>
+          <item>OPT - Option Menu</item>
+          <item>M3D - 3D/2D Conversion</item>
+          <item>CLR - Clear</item>
+          <item>OSD - On Screen Display</item>
+          <item>AUD - Audio Language</item>
+          <item>SUB - Subtitle Language</item>
+          <item>ANG - Camera Angle</item>
+          <item>SEH - Picture Adjustment</item>
+          <item>ZOM - Zoom Adjustment</item>
+          <item>RPT - Repeat Play</item>
+          <item>RED - Red</item>
+          <item>GRN - Green</item>
+          <item>YLW - Yellow</item>
+          <item>BLU - Blue</item>
+          <item>RET - Return</item>
+          <item>EJT - Eject</item>
+        </items>
+      </property>
+      <property>
+        <name>Pound</name>
+        <type>LIST</type>
+        <default>EJT - Eject</default>
+        <items>
+          <item>NOP - No Operation</item>
+          <item>HOM - Home Menu</item>
+          <item>MNU - Popup Menu</item>
+          <item>TTL - Top Menu</item>
+          <item>HDR - HDR Menu</item>
+          <item>GOT - Go To Menu</item>
+          <item>OPT - Option Menu</item>
+          <item>M3D - 3D/2D Conversion</item>
+          <item>CLR - Clear</item>
+          <item>OSD - On Screen Display</item>
+          <item>AUD - Audio Language</item>
+          <item>SUB - Subtitle Language</item>
+          <item>ANG - Camera Angle</item>
+          <item>SEH - Picture Adjustment</item>
+          <item>ZOM - Zoom Adjustment</item>
+          <item>RPT - Repeat Play</item>
+          <item>RED - Red</item>
+          <item>GRN - Green</item>
+          <item>YLW - Yellow</item>
+          <item>BLU - Blue</item>
+          <item>RET - Return</item>
+          <item>EJT - Eject</item>
+        </items>
+      </property>
+      <property>
+        <name>DVR</name>
+        <type>LIST</type>
+        <default>NOP - No Operation</default>
+        <items>
+          <item>NOP - No Operation</item>
+          <item>HOM - Home Menu</item>
+          <item>MNU - Popup Menu</item>
+          <item>TTL - Top Menu</item>
+          <item>HDR - HDR Menu</item>
+          <item>GOT - Go To Menu</item>
+          <item>OPT - Option Menu</item>
+          <item>M3D - 3D/2D Conversion</item>
+          <item>CLR - Clear</item>
+          <item>OSD - On Screen Display</item>
+          <item>AUD - Audio Language</item>
+          <item>SUB - Subtitle Language</item>
+          <item>ANG - Camera Angle</item>
+          <item>SEH - Picture Adjustment</item>
+          <item>ZOM - Zoom Adjustment</item>
+          <item>RPT - Repeat Play</item>
+          <item>RED - Red</item>
+          <item>GRN - Green</item>
+          <item>YLW - Yellow</item>
+          <item>BLU - Blue</item>
+          <item>RET - Return</item>
+          <item>EJT - Eject</item>
+        </items>
+      </property>
+      <property>
+        <name>Record</name>
+        <type>LIST</type>
+        <default>NOP - No Operation</default>
+        <items>
+          <item>NOP - No Operation</item>
+          <item>HOM - Home Menu</item>
+          <item>MNU - Popup Menu</item>
+          <item>TTL - Top Menu</item>
+          <item>HDR - HDR Menu</item>
+          <item>GOT - Go To Menu</item>
+          <item>OPT - Option Menu</item>
+          <item>M3D - 3D/2D Conversion</item>
+          <item>CLR - Clear</item>
+          <item>OSD - On Screen Display</item>
+          <item>AUD - Audio Language</item>
+          <item>SUB - Subtitle Language</item>
+          <item>ANG - Camera Angle</item>
+          <item>SEH - Picture Adjustment</item>
+          <item>ZOM - Zoom Adjustment</item>
+          <item>RPT - Repeat Play</item>
+          <item>RED - Red</item>
+          <item>GRN - Green</item>
+          <item>YLW - Yellow</item>
+          <item>BLU - Blue</item>
+          <item>RET - Return</item>
+          <item>EJT - Eject</item>
+        </items>
+      </property>
+      <property>
+        <name>Info</name>
+        <type>LIST</type>
+        <default>SUB - Subtitle Language</default>
+        <items>
+          <item>NOP - No Operation</item>
+          <item>HOM - Home Menu</item>
+          <item>MNU - Popup Menu</item>
+          <item>TTL - Top Menu</item>
+          <item>HDR - HDR Menu</item>
+          <item>GOT - Go To Menu</item>
+          <item>OPT - Option Menu</item>
+          <item>M3D - 3D/2D Conversion</item>
+          <item>CLR - Clear</item>
+          <item>OSD - On Screen Display</item>
+          <item>AUD - Audio Language</item>
+          <item>SUB - Subtitle Language</item>
+          <item>ANG - Camera Angle</item>
+          <item>SEH - Picture Adjustment</item>
+          <item>ZOM - Zoom Adjustment</item>
+          <item>RPT - Repeat Play</item>
+          <item>RED - Red</item>
+          <item>GRN - Green</item>
+          <item>YLW - Yellow</item>
+          <item>BLU - Blue</item>
+          <item>RET - Return</item>
+          <item>EJT - Eject</item>
+        </items>
+      </property>
+      <property>
+        <name>Menu</name>
+        <type>LIST</type>
+        <default>HOM - Home Menu</default>
+        <items>
+          <item>NOP - No Operation</item>
+          <item>HOM - Home Menu</item>
+          <item>MNU - Popup Menu</item>
+          <item>TTL - Top Menu</item>
+          <item>HDR - HDR Menu</item>
+          <item>GOT - Go To Menu</item>
+          <item>OPT - Option Menu</item>
+          <item>M3D - 3D/2D Conversion</item>
+          <item>CLR - Clear</item>
+          <item>OSD - On Screen Display</item>
+          <item>AUD - Audio Language</item>
+          <item>SUB - Subtitle Language</item>
+          <item>ANG - Camera Angle</item>
+          <item>SEH - Picture Adjustment</item>
+          <item>ZOM - Zoom Adjustment</item>
+          <item>RPT - Repeat Play</item>
+          <item>RED - Red</item>
+          <item>GRN - Green</item>
+          <item>YLW - Yellow</item>
+          <item>BLU - Blue</item>
+          <item>RET - Return</item>
+          <item>EJT - Eject</item>
+        </items>
+      </property>
+      <property>
+        <name>Cancel</name>
+        <type>LIST</type>
+        <default>RET - Return</default>
+        <items>
+          <item>NOP - No Operation</item>
+          <item>HOM - Home Menu</item>
+          <item>MNU - Popup Menu</item>
+          <item>TTL - Top Menu</item>
+          <item>HDR - HDR Menu</item>
+          <item>GOT - Go To Menu</item>
+          <item>OPT - Option Menu</item>
+          <item>M3D - 3D/2D Conversion</item>
+          <item>CLR - Clear</item>
+          <item>OSD - On Screen Display</item>
+          <item>AUD - Audio Language</item>
+          <item>SUB - Subtitle Language</item>
+          <item>ANG - Camera Angle</item>
+          <item>SEH - Picture Adjustment</item>
+          <item>ZOM - Zoom Adjustment</item>
+          <item>RPT - Repeat Play</item>
+          <item>RED - Red</item>
+          <item>GRN - Green</item>
+          <item>YLW - Yellow</item>
+          <item>BLU - Blue</item>
+          <item>RET - Return</item>
+          <item>EJT - Eject</item>
+        </items>
+      </property>
+      <property>
+        <name>Guide</name>
+        <type>LIST</type>
+        <default>OPT - Option Menu</default>
+        <items>
+          <item>NOP - No Operation</item>
+          <item>HOM - Home Menu</item>
+          <item>MNU - Popup Menu</item>
+          <item>TTL - Top Menu</item>
+          <item>HDR - HDR Menu</item>
+          <item>GOT - Go To Menu</item>
+          <item>OPT - Option Menu</item>
+          <item>M3D - 3D/2D Conversion</item>
+          <item>CLR - Clear</item>
+          <item>OSD - On Screen Display</item>
+          <item>AUD - Audio Language</item>
+          <item>SUB - Subtitle Language</item>
+          <item>ANG - Camera Angle</item>
+          <item>SEH - Picture Adjustment</item>
+          <item>ZOM - Zoom Adjustment</item>
+          <item>RPT - Repeat Play</item>
+          <item>RED - Red</item>
+          <item>GRN - Green</item>
+          <item>YLW - Yellow</item>
+          <item>BLU - Blue</item>
+          <item>RET - Return</item>
+          <item>EJT - Eject</item>
+        </items>
+      </property>
+      <property>
+        <name>Previous</name>
+        <type>LIST</type>
+        <default>RET - Return</default>
+        <items>
+          <item>NOP - No Operation</item>
+          <item>HOM - Home Menu</item>
+          <item>MNU - Popup Menu</item>
+          <item>TTL - Top Menu</item>
+          <item>HDR - HDR Menu</item>
+          <item>GOT - Go To Menu</item>
+          <item>OPT - Option Menu</item>
+          <item>M3D - 3D/2D Conversion</item>
+          <item>CLR - Clear</item>
+          <item>OSD - On Screen Display</item>
+          <item>AUD - Audio Language</item>
+          <item>SUB - Subtitle Language</item>
+          <item>ANG - Camera Angle</item>
+          <item>SEH - Picture Adjustment</item>
+          <item>ZOM - Zoom Adjustment</item>
+          <item>RPT - Repeat Play</item>
+          <item>RED - Red</item>
+          <item>GRN - Green</item>
+          <item>YLW - Yellow</item>
+          <item>BLU - Blue</item>
+          <item>RET - Return</item>
+          <item>EJT - Eject</item>
+        </items>
+      </property>
+      <property>
+        <name>Page Up</name>
+        <type>LIST</type>
+        <default>TTL - Top Menu</default>
+        <items>
+          <item>NOP - No Operation</item>
+          <item>HOM - Home Menu</item>
+          <item>MNU - Popup Menu</item>
+          <item>TTL - Top Menu</item>
+          <item>HDR - HDR Menu</item>
+          <item>GOT - Go To Menu</item>
+          <item>OPT - Option Menu</item>
+          <item>M3D - 3D/2D Conversion</item>
+          <item>CLR - Clear</item>
+          <item>OSD - On Screen Display</item>
+          <item>AUD - Audio Language</item>
+          <item>SUB - Subtitle Language</item>
+          <item>ANG - Camera Angle</item>
+          <item>SEH - Picture Adjustment</item>
+          <item>ZOM - Zoom Adjustment</item>
+          <item>RPT - Repeat Play</item>
+          <item>RED - Red</item>
+          <item>GRN - Green</item>
+          <item>YLW - Yellow</item>
+          <item>BLU - Blue</item>
+          <item>RET - Return</item>
+          <item>EJT - Eject</item>
+        </items>
+      </property>
+      <property>
+        <name>Page Down</name>
+        <type>LIST</type>
+        <default>MNU - Popup Menu</default>
+        <items>
+          <item>NOP - No Operation</item>
+          <item>HOM - Home Menu</item>
+          <item>MNU - Popup Menu</item>
+          <item>TTL - Top Menu</item>
+          <item>HDR - HDR Menu</item>
+          <item>GOT - Go To Menu</item>
+          <item>OPT - Option Menu</item>
+          <item>M3D - 3D/2D Conversion</item>
+          <item>CLR - Clear</item>
+          <item>OSD - On Screen Display</item>
+          <item>AUD - Audio Language</item>
+          <item>SUB - Subtitle Language</item>
+          <item>ANG - Camera Angle</item>
+          <item>SEH - Picture Adjustment</item>
+          <item>ZOM - Zoom Adjustment</item>
+          <item>RPT - Repeat Play</item>
+          <item>RED - Red</item>
+          <item>GRN - Green</item>
+          <item>YLW - Yellow</item>
+          <item>BLU - Blue</item>
+          <item>RET - Return</item>
+          <item>EJT - Eject</item>
+        </items>
+      </property>
+    </properties>
+    <power_management_method>DiscreteCodes</power_management_method>
+    <power_delay>0</power_delay>
+    <power_command_delay>0</power_command_delay>
+    <power_command_needed>True</power_command_needed>
+    <serialsettings>9600 8 none 1 none 232</serialsettings>
+    <identify_text>OPPO BLURAY PLAYER</identify_text>
+  </config>
+  <composer_categories>
+    <category>Audio/Video</category>
+  </composer_categories>
+  <replaces>
+    <replace>OPPO</replace>
+  </replaces>
+  <search_types>
+    <type>OPPO</type>
+    <type>Bluray</type>
+  </search_types>
+  <events>
+    <event>
+      <id>1</id>
+      <name>DISC - BDMV</name>
+      <description>When a Bluray Movie Disc is inserted</description>
+    </event>
+    <event>
+      <id>3</id>
+      <name>DISC - DVDV</name>
+      <description>When a DVD Video Disc is inserted</description>
+    </event>
+    <event>
+      <id>4</id>
+      <name>DISC - DVDA</name>
+      <description>When a DVD Audio Disc is inserted</description>
+    </event>
+    <event>
+      <id>5</id>
+      <name>DISC - SACD</name>
+      <description>When a SACD Disc is inserted</description>
+    </event>
+    <event>
+      <id>6</id>
+      <name>DISC - CDDA</name>
+      <description>When a CD is inserted</description>
+    </event>
+    <event>
+      <id>7</id>
+      <name>DISC - DATA</name>
+      <description>When a DATA Disc is inserted</description>
+    </event>
+    <event>
+      <id>8</id>
+      <name>DISC - VCD2</name>
+      <description>When a Video CD 2.0 is inserted</description>
+    </event>
+    <event>
+      <id>9</id>
+      <name>DISC - SVCD</name>
+      <description>When a Super Video CD is inserted</description>
+    </event>
+    <event>
+      <id>10</id>
+      <name>DISC - OTHER</name>
+      <description>When a UNK Disc is inserted</description>
+    </event>
+    <event>
+      <id>11</id>
+      <name>Player - LOAD</name>
+      <description>When the player is loading a Disc</description>
+    </event>
+    <event>
+      <id>12</id>
+      <name>Player - CLOSE</name>
+      <description>When the DVD tray is closed</description>
+    </event>
+    <event>
+      <id>13</id>
+      <name>Player - OPEN</name>
+      <description>When the DVD tray is opened</description>
+    </event>
+    <event>
+      <id>14</id>
+      <name>Player - HOME</name>
+      <description>When the player goes to the home screen</description>
+    </event>
+    <event>
+      <id>15</id>
+      <name>Player - EMPTY</name>
+      <description>When the DVD tray is empty</description>
+    </event>
+    <event>
+      <id>16</id>
+      <name>Player - SCREEN SAVER</name>
+      <description>When the screen saver activates</description>
+    </event>
+  </events>
+</devicedata>
